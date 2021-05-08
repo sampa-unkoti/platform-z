@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.5</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.kalam.analytics</groupId>
+	<artifactId>platform-z</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>platform-z</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>1.8</java.version>
+		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
+		<ignite.version>2.9.1</ignite.version>
+	</properties>
+	<dependencies>
+	<!---Spring -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-aop-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-aop-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-context-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-context-support-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-core-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-expression-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-jdbc-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-jmx</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-integration-jmx-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-orm-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-oxm-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-security-web-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-tx-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-web-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-webmvc-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-remoting</artifactId>
+			<version>2.0.8</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-remoting-2.0.8.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.ws</groupId>
+			<artifactId>spring-ws-core</artifactId>
+			<version>3.0.8.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-ws-core-3.0.8.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.ws</groupId>
+			<artifactId>spring-ws-security</artifactId>
+			<version>3.0.8.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-ws-security-3.0.8.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.ws</groupId>
+			<artifactId>spring-xml</artifactId>
+			<version>3.0.8.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-xml-3.0.8.RELEASE.jar</systemPath> -->
+		</dependency>
+
+		<!-- spring security -->
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-security-config-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-security-core-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-openid</artifactId>
+			<version>5.2.2.RELEASE</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/spring-security-openid-5.2.2.RELEASE.jar</systemPath> -->
+		</dependency>
+
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>5.2.2.RELEASE</version>
+		    <scope>test</scope>
+		</dependency>
+
+		<!--quartz -->
+
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.3.0</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/quartz-2.3.0.jar</systemPath> -->
+		</dependency>
+
+
+		<!-- hibernate -->
+
+		<dependency>
+			<groupId>org.hibernate.common</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>5.1.0.Final</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/hibernate-commons-annotations-5.1.0.Final.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.4.Final</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/hibernate-core-5.4.4.Final.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>2.2</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/javax.persistence-api-2.2.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
+			<version>3.4.1.Final</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/jboss-logging-3.4.1.Final.jar</systemPath> -->
+		</dependency>
+		<!--ehcache -->
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>5.4.4.Final</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/hibernate-ehcache-5.4.4.Final.jar</systemPath> -->
+		</dependency>
+		<dependency>
+			<groupId>net.bytebuddy</groupId>
+			<artifactId>byte-buddy</artifactId>
+			<version>1.10.6</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>C:/dnb/install/workspace/capgent-svn/lib-jars/byte-buddy-1.10.6.jar</systemPath> -->
+		</dependency>
+
+		<!--HikariCP -->
+		
+		<dependency>
+	        <groupId>com.zaxxer</groupId>
+	        <artifactId>HikariCP</artifactId>
+	        <version>4.0.3</version>
+	    </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-quartz</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-actuator</artifactId>		  
+		</dependency>
+		<dependency>
+			<groupId>com.okta.spring</groupId>
+			<artifactId>okta-spring-boot-starter</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-streams</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>	
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+	    	<groupId>org.apache.ignite</groupId>
+	    	<artifactId>ignite-core</artifactId>
+	    	<version>${ignite.version}</version>
+	    	<scope>provided</scope>
+	    </dependency>
+	    <dependency>
+		    <groupId>org.apache.ignite</groupId>
+		    <artifactId>ignite-spring</artifactId>
+		    <version>${ignite.version}</version>    
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.ignite</groupId>
+		    <artifactId>ignite-indexing</artifactId>
+		    <version>${ignite.version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.30</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-boot-starter</artifactId>
+		    <version>3.0.0</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.livy</groupId>
+		  <artifactId>livy-client-http</artifactId>
+		  <version>0.7.0-incubating</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
+		<dependency>
+		    <groupId>org.apache.spark</groupId>
+		    <artifactId>spark-core_2.12</artifactId>
+		    <version>3.1.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+		<dependency>
+		    <groupId>org.apache.spark</groupId>
+		    <artifactId>spark-sql_2.12</artifactId>
+		    <version>3.1.1</version>
+		</dependency>
+		
+	</dependencies>
+
+    <dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
